@@ -1,0 +1,10 @@
+<template name="task">
+    <li class="{{#if checked}} checked{{/if}}">
+        <button class="delete">&times;</button>
+        <button class="edit-cancel {{#if isEdit}} d-inline {{else}} d-none {{/if}}">Cancel Edit</button>
+        <button class="edit {{#if isEdit}} d-inline {{else}} d-none {{/if}}">Edit</button>
+        <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+        <span class="text {{#if isEdit}} d-none {{else}} d-inline {{/if}}">{{text}}</span>
+        <input type="text" class="text-input {{#if isEdit}} d-inline {{else}} d-none {{/if}}" value="{{text}}">
+    </li>
+</template>
